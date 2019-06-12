@@ -37,7 +37,7 @@ for j in range(len(folder)):
     				with open(f_name, "wb") as outputStream:
     					output.write(outputStream)
     				# Converting PDF to JPEG
-    				page=convert_from_path(f_name,dpi=500);
+    				page=convert_from_path(f_name,dpi=200);
     				fname="file-"+str(count)+"-"+t[:-4]+"-page"+str(k+1)+".png";
     				page[0].save(dest_jpg+fname,'PNG');
 print("--- %s seconds ---" % (time.time() - start_time))
