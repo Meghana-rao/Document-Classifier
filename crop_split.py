@@ -46,7 +46,7 @@ for j in range(len(folder)):
             except Exception as e:
                 print(e)
                 temp = []
-                temp.append(t)
+                temp.append(folder[j]+"/"+t)
                 temp.append(str(e))
                 errors.append(temp)
 path = "/home/ieshaan/Desktop/Python/Misc/DocumentClassificationExercise/"
@@ -69,14 +69,15 @@ files.append(str(TOTAL_FILES))
 no_of_png = ["PNG COUNT"]
 no_of_png.append(str(png_count))
 
-print(timer)
-print(files)
-print(no_of_png)
+stats = []
+stats.append(timer)
+stats.append(files)
+stats.append(no_of_png)
 
+print(stats)
+print(errors)
 
 with open(path+'stats.csv','w') as csvFile:
     writer = csv.writer(csvFile)
-    writer.writerows(timer)
-    writer.writerows(files)
-    writer.writerows(no_of_png)
+    writer.writerows(stats)
 csvFile.close()
