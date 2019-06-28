@@ -1,6 +1,6 @@
 ## Document-Classifier
 Liabraries needed include
-pdf2image, PyPDF2, os, numpy, subprocess, csv, sklearn, 
+pdf2image, PyPDF2, os, numpy, subprocess, csv, sklearn, cv2, tensorflow
 
 ## Files to download
 retrained_graph.pb <br/>
