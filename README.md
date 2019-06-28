@@ -3,16 +3,16 @@ Liabraries needed include
 pdf2image, PyPDF2, os, numpy, subprocess, csv, sklearn, 
 
 ## Files to download
-retrained_graph.pb
-retrained_labels.txt
-count_ops.py
-evaluate.py
-graph_pb2tb.py
-__init__.py
-label_image.py
-retrain.py
-quantize_graph.py
-show_image.py
+retrained_graph.pb <br/>
+retrained_labels.txt<br/>
+count_ops.py<br/>
+evaluate.py<br/>
+graph_pb2tb.py<br/>
+__init__.py<br/>
+label_image.py<br/>
+retrain.py<br/>
+quantize_graph.py<br/>
+show_image.py<br/>
 
 ## To retrain the model
 ```
