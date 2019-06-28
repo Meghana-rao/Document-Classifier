@@ -4,7 +4,7 @@
 #### ESSENTIAL LIBRARIES FOR MAIN FUNCTIONALITY ####
 
 pip3 install tensorflow == 1.13.1
-pip3 install opencv-python == 3.4.2
+pip3 install "opencv-python>= 3.4.2"
 pip3 install numpy == 1.16.2
 pip3 install sklearn == 0.20.3
 pip3 install pdf2image == 0.1.4
