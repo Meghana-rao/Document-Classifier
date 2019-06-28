@@ -8,15 +8,17 @@ TOTAL_FILES = 0
 folder=[]
 
 #Edit source document folder here
-cwd="/home/ieshaan/Desktop/Python/Misc/Document Classification Exercise/community/"
+cwd="/home/ieshaan/Desktop/Python/Misc/DocumentClassificationExercise/income/"
 
 #Edit destination document folder here 
-dest="/home/ieshaan/Desktop/Python/Misc/Document Classification Exercise/Commmunity_Sorted/"
+dest="/home/ieshaan/Desktop/Python/Misc/DocumentClassificationExercise/income_sorted/"
 
 #Edit jpg destination folder here
-dest_jpg="/home/ieshaan/Desktop/Python/Misc/Document Classification Exercise/comm_jpg/"
+dest_jpg="/home/ieshaan/Desktop/Python/Misc/DocumentClassificationExercise/income_png/"
 
 errors = []
+
+png_count = 0
 
 for i in os.listdir(cwd):
 	folder.append(i)
@@ -40,10 +42,14 @@ for j in range(len(folder)):
                     page=convert_from_path(dest + f_name,dpi=100);
                     fname=f_name[:-4]+ ".png";
                     page[0].save(dest_jpg+fname,'PNG');
+                    png_count +=1
             except Exception as e:
                 print(e)
-                errors.append(str(e))
-path = "/home/ieshaan/Desktop/Python/Misc/Document Classification Exercise/"
+                temp = []
+                temp.append(t)
+                temp.append(str(e))
+                errors.append(temp)
+path = "/home/ieshaan/Desktop/Python/Misc/DocumentClassificationExercise/"
 
 with open(path+'data.csv','w') as csvFile:
     writer = csv.writer(csvFile)
@@ -51,4 +57,26 @@ with open(path+'data.csv','w') as csvFile:
 csvFile.close()
 
 print(TOTAL_FILES)
-print("--- %s seconds ---" % (time.time() - start_time))
+time_taken = time.time() - start_time
+print("--- %s seconds ---" % (time_taken))
+
+timer = ["Time"]
+timer.append(str(time_taken))
+
+files = ["TOTAL_FILES(PDF)"]
+files.append(str(TOTAL_FILES))
+
+no_of_png = ["PNG COUNT"]
+no_of_png.append(str(png_count))
+
+print(timer)
+print(files)
+print(no_of_png)
+
+
+with open(path+'stats.csv','w') as csvFile:
+    writer = csv.writer(csvFile)
+    writer.writerows(timer)
+    writer.writerows(files)
+    writer.writerows(no_of_png)
+csvFile.close()
