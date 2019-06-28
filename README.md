@@ -7,8 +7,8 @@ retrained_graph.pb <br/>
 retrained_labels.txt<br/>
 count_ops.py<br/>
 evaluate.py<br/>
-graph_pb2tb.py<br/>
-<p>__init__.py</p><br/>
+graph_pb2tb.py
+<p>__init__.py</p>
 label_image.py<br/>
 retrain.py<br/>
 quantize_graph.py<br/>
