@@ -13,6 +13,7 @@ label_image.py<br/>
 retrain.py<br/>
 quantize_graph.py<br/>
 show_image.py<br/>
+net_tester.py<br/>
 
 ## To retrain the model
 ```
